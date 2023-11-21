@@ -3,7 +3,7 @@ spring:
     activate:
       # Profile expressions that should match for the document to be included.
       # 수록될 문서와 맞는 프로필 표현
-      on-profiles: test
+      on-profiles: h2
   h2:
     console:
       # Whether to enable the console.
