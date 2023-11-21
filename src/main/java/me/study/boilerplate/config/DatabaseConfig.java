@@ -1,5 +1,6 @@
 package me.study.boilerplate.config;
 
+import lombok.RequiredArgsConstructor;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.SqlSessionTemplate;
@@ -12,12 +13,9 @@ import javax.sql.DataSource;
 
 @Configuration
 @MapperScan({"me.study.boilerplate"})
+@RequiredArgsConstructor
 public class DatabaseConfig {
     private final ApplicationContext applicationContext;
-
-    public DatabaseConfig(ApplicationContext applicationContext) {
-        this.applicationContext = applicationContext;
-    }
 
     @Bean
     public SqlSessionFactory sessionFactory(DataSource dataSource) throws Exception {

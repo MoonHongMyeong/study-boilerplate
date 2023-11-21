@@ -25,6 +25,9 @@ dependencies {
 	runtimeOnly 'com.h2database:h2'
 	// MySql Driver 의존성 추가
 	runtimeOnly 'com.mysql:mysql-connector-j'
+	// Lombok 의존성 추가
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
 }
 
 tasks.named('bootBuildImage') {
