@@ -1,0 +1,24 @@
+spring:
+  config:
+    activate:
+      # Profile expressions that should match for the document to be included.
+      # 수록될 문서와 맞는 프로필 표현
+      on-profiles: test
+  h2:
+    console:
+      # Whether to enable the console.
+      # 콘솔 사용 여부
+      enabled: true
+      # Path at which the console is available.
+      # 콘솔 사용 가능한 경로
+      path: /h2-console
+
+    datasource:
+      # Fully qualified name of the JDBC driver. Auto-detected based on the URL by default.
+      # JDBC 드라이버의 정규화된 이름. URL 을 기준으로 자동 검색
+      driver-class-name: org.h2.Driver
+      # JDBC URL of the database.
+      # 데이터베이스의 JDBC URL
+      url: jdbc:h2:~/study
+      username: sa
+      password:
