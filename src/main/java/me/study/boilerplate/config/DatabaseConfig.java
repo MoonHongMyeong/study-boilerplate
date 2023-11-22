@@ -22,7 +22,7 @@ public class DatabaseConfig {
         SqlSessionFactoryBean sessionFactoryBean = new SqlSessionFactoryBean();
 
         sessionFactoryBean.setDataSource(dataSource);
-        sessionFactoryBean.setMapperLocations(applicationContext.getResource("classpath:/mapper/**/*.xml"));
+        sessionFactoryBean.setMapperLocations(applicationContext.getResources("classpath:/mapper/**/*.xml"));
 
         return sessionFactoryBean.getObject();
     }
